@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+
+# Frontend build output
+dist/
+.angular/cache/
+coverage/
+
+# ASP.NET Core build output
+bin/
+obj/
+
+# Local ASP.NET configuration
+appsettings.*.json
+!appsettings.json
+*.user
+*.suo
+
+# Visual Studio
+.vs/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# IDE/editor files
+.idea/
+.history/
+*.sublime-workspace
+
+# Environment and logs
+.env
+.env.*
+*.log
+logs/
+
+# Operating system files
+.DS_Store
+Thumbs.db

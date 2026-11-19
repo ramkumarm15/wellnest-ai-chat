@@ -1,0 +1,22 @@
+@HealthAssistant.Api_HostAddress = http://localhost:5124
+
+### Stream a chat answer
+POST {{HealthAssistant.Api_HostAddress}}/api/chat
+Content-Type: application/json
+Accept: text/plain
+
+{
+  "message": "What are the key points in the company health guidance?",
+  "history": []
+}
+
+### Index a PDF or DOCX (replace ./guidance.pdf with a local file)
+POST {{HealthAssistant.Api_HostAddress}}/api/documents
+Content-Type: multipart/form-data; boundary=----WellnestBoundary
+
+------WellnestBoundary
+Content-Disposition: form-data; name="file"; filename="guidance.pdf"
+Content-Type: application/pdf
+
+< ./guidance.pdf
+------WellnestBoundary--
